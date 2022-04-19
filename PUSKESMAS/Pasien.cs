@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PUSKESMAS
 {
-    public partial class Dokter : Form
+    public partial class formPasien : Form
     {
-        public Dokter()
+        public formPasien()
         {
             InitializeComponent();
         }

@@ -10,20 +10,11 @@ using System.Windows.Forms;
 
 namespace PUSKESMAS
 {
-    public partial class FormLogin : Form
+    public partial class FormRuangan : Form
     {
-        public FormLogin()
+        public FormRuangan()
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            formMenu frmMenu = new formMenu();
-            frmMenu.Show();
-            this.Hide();
-
-        }
     }
 }
- 

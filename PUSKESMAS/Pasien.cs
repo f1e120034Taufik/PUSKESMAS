@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PUSKESMAS
 {
-    public partial class formPasien : Form
+    public partial class FormPasien : Form
     {
-        public formPasien()
+        public FormPasien()
         {
             InitializeComponent();
         }

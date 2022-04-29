@@ -19,12 +19,17 @@ namespace PUSKESMAS
 
         private void pictureBoxDokter_Click(object sender, EventArgs e)
         {
-            
+            FormDokter frmDokter = new FormDokter();
+            frmDokter.TopLevel = false;
+            frmDokter.AutoScroll = true;
+            this.panelContent.Controls.Clear();
+            this.panelContent.Controls.Add(frmDokter);
+            frmDokter.Show();
         }
 
         private void pictureBoxPasien_Click(object sender, EventArgs e)
         {
-            formPasien frmPasien = new formPasien();
+            FormPasien frmPasien = new FormPasien();
             frmPasien.TopLevel = false;
             frmPasien.AutoScroll = true;
             this.panelContent.Controls.Clear();
@@ -38,6 +43,26 @@ namespace PUSKESMAS
             {
                 Application.Exit();
             }
+        }
+
+        private void pictureBoxObat_Click(object sender, EventArgs e)
+        {
+            FormObat frmObat = new FormObat();
+            frmObat.TopLevel = false;
+            frmObat.AutoScroll = true;
+            this.panelContent.Controls.Clear();
+            this.panelContent.Controls.Add(frmObat);
+            frmObat.Show();
+        }
+
+        private void pictureBoxRuangan_Click(object sender, EventArgs e)
+        {
+            FormRuangan frmRuangan = new FormRuangan();
+            frmRuangan.TopLevel = false;
+            frmRuangan.AutoScroll = true;
+            this.panelContent.Controls.Clear();
+            this.panelContent.Controls.Add(frmRuangan);
+            frmRuangan.Show();
         }
     }
 }

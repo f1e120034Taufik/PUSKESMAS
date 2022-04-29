@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMenu));
             this.panelNavigasi = new System.Windows.Forms.Panel();
+            this.labelTutup = new System.Windows.Forms.Label();
+            this.pictureBoxTutup = new System.Windows.Forms.PictureBox();
             this.labelRuangan = new System.Windows.Forms.Label();
             this.pictureBoxRuangan = new System.Windows.Forms.PictureBox();
             this.labelObat = new System.Windows.Forms.Label();
@@ -40,14 +42,12 @@
             this.pictureBoxDokter = new System.Windows.Forms.PictureBox();
             this.panelFooter = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
-            this.labelTutup = new System.Windows.Forms.Label();
-            this.pictureBoxTutup = new System.Windows.Forms.PictureBox();
             this.panelNavigasi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTutup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRuangan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxObat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDokter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTutup)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNavigasi
@@ -69,6 +69,30 @@
             this.panelNavigasi.Size = new System.Drawing.Size(1312, 96);
             this.panelNavigasi.TabIndex = 0;
             // 
+            // labelTutup
+            // 
+            this.labelTutup.AutoSize = true;
+            this.labelTutup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTutup.ForeColor = System.Drawing.Color.Transparent;
+            this.labelTutup.Location = new System.Drawing.Point(500, 71);
+            this.labelTutup.Name = "labelTutup";
+            this.labelTutup.Size = new System.Drawing.Size(56, 20);
+            this.labelTutup.TabIndex = 9;
+            this.labelTutup.Text = "Tutup";
+            // 
+            // pictureBoxTutup
+            // 
+            this.pictureBoxTutup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxTutup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxTutup.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTutup.Image")));
+            this.pictureBoxTutup.Location = new System.Drawing.Point(496, 12);
+            this.pictureBoxTutup.Name = "pictureBoxTutup";
+            this.pictureBoxTutup.Size = new System.Drawing.Size(63, 56);
+            this.pictureBoxTutup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxTutup.TabIndex = 8;
+            this.pictureBoxTutup.TabStop = false;
+            this.pictureBoxTutup.Click += new System.EventHandler(this.pictureBoxTutup_Click);
+            // 
             // labelRuangan
             // 
             this.labelRuangan.AutoSize = true;
@@ -83,6 +107,7 @@
             // pictureBoxRuangan
             // 
             this.pictureBoxRuangan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxRuangan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxRuangan.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRuangan.Image")));
             this.pictureBoxRuangan.Location = new System.Drawing.Point(374, 12);
             this.pictureBoxRuangan.Name = "pictureBoxRuangan";
@@ -90,6 +115,7 @@
             this.pictureBoxRuangan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxRuangan.TabIndex = 6;
             this.pictureBoxRuangan.TabStop = false;
+            this.pictureBoxRuangan.Click += new System.EventHandler(this.pictureBoxRuangan_Click);
             // 
             // labelObat
             // 
@@ -105,6 +131,7 @@
             // pictureBoxObat
             // 
             this.pictureBoxObat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxObat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxObat.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxObat.Image")));
             this.pictureBoxObat.Location = new System.Drawing.Point(256, 12);
             this.pictureBoxObat.Name = "pictureBoxObat";
@@ -112,6 +139,7 @@
             this.pictureBoxObat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxObat.TabIndex = 4;
             this.pictureBoxObat.TabStop = false;
+            this.pictureBoxObat.Click += new System.EventHandler(this.pictureBoxObat_Click);
             // 
             // labelPasien
             // 
@@ -127,6 +155,7 @@
             // pictureBoxPasien
             // 
             this.pictureBoxPasien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxPasien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxPasien.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPasien.Image")));
             this.pictureBoxPasien.Location = new System.Drawing.Point(136, 12);
             this.pictureBoxPasien.Name = "pictureBoxPasien";
@@ -150,6 +179,7 @@
             // pictureBoxDokter
             // 
             this.pictureBoxDokter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxDokter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxDokter.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDokter.Image")));
             this.pictureBoxDokter.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxDokter.Name = "pictureBoxDokter";
@@ -177,29 +207,6 @@
             this.panelContent.Size = new System.Drawing.Size(1312, 558);
             this.panelContent.TabIndex = 2;
             // 
-            // labelTutup
-            // 
-            this.labelTutup.AutoSize = true;
-            this.labelTutup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTutup.ForeColor = System.Drawing.Color.Transparent;
-            this.labelTutup.Location = new System.Drawing.Point(500, 71);
-            this.labelTutup.Name = "labelTutup";
-            this.labelTutup.Size = new System.Drawing.Size(56, 20);
-            this.labelTutup.TabIndex = 9;
-            this.labelTutup.Text = "Tutup";
-            // 
-            // pictureBoxTutup
-            // 
-            this.pictureBoxTutup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxTutup.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTutup.Image")));
-            this.pictureBoxTutup.Location = new System.Drawing.Point(496, 12);
-            this.pictureBoxTutup.Name = "pictureBoxTutup";
-            this.pictureBoxTutup.Size = new System.Drawing.Size(63, 56);
-            this.pictureBoxTutup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxTutup.TabIndex = 8;
-            this.pictureBoxTutup.TabStop = false;
-            this.pictureBoxTutup.Click += new System.EventHandler(this.pictureBoxTutup_Click);
-            // 
             // formMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -216,11 +223,11 @@
             this.Text = "formMenu";
             this.panelNavigasi.ResumeLayout(false);
             this.panelNavigasi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTutup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRuangan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxObat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPasien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDokter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTutup)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -36,6 +36,8 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonShowPassword = new System.Windows.Forms.Button();
+            this.buttonHidePassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelJudul
@@ -86,6 +88,7 @@
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPassword.Location = new System.Drawing.Point(187, 272);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(186, 29);
             this.textBoxPassword.TabIndex = 4;
             // 
@@ -109,6 +112,26 @@
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonShowPassword
+            // 
+            this.buttonShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("buttonShowPassword.Image")));
+            this.buttonShowPassword.Location = new System.Drawing.Point(342, 271);
+            this.buttonShowPassword.Name = "buttonShowPassword";
+            this.buttonShowPassword.Size = new System.Drawing.Size(31, 29);
+            this.buttonShowPassword.TabIndex = 9;
+            this.buttonShowPassword.UseVisualStyleBackColor = true;
+            this.buttonShowPassword.Click += new System.EventHandler(this.buttonShowPassword_Click);
+            // 
+            // buttonHidePassword
+            // 
+            this.buttonHidePassword.Image = ((System.Drawing.Image)(resources.GetObject("buttonHidePassword.Image")));
+            this.buttonHidePassword.Location = new System.Drawing.Point(342, 272);
+            this.buttonHidePassword.Name = "buttonHidePassword";
+            this.buttonHidePassword.Size = new System.Drawing.Size(31, 29);
+            this.buttonHidePassword.TabIndex = 10;
+            this.buttonHidePassword.UseVisualStyleBackColor = true;
+            this.buttonHidePassword.Click += new System.EventHandler(this.buttonHidePassword_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -117,6 +140,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(542, 439);
+            this.Controls.Add(this.buttonShowPassword);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxPassword);
@@ -124,6 +148,7 @@
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelJudul);
+            this.Controls.Add(this.buttonHidePassword);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -131,6 +156,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,6 +171,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonShowPassword;
+        private System.Windows.Forms.Button buttonHidePassword;
     }
 }
 

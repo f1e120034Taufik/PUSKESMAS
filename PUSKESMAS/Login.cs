@@ -22,19 +22,28 @@ namespace PUSKESMAS
             User user = new User();
             user.username = textBoxUsername.Text;
             user.password = textBoxPassword.Text;
-            if (user.validasi())
+            try
             {
-                MessageBox.Show("User Berhasil Login");
-                formMenu frmMenu = new formMenu();
-                frmMenu.Show();
-                this.Hide();
-            }
-            else
+                if (user.validasi())
+                {
+                    MessageBox.Show("User Berhasil Login");
+                    formMenu frmMenu = new formMenu();
+                    frmMenu.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("User gagal login");
+                    textBoxUsername.Text = "";
+                    textBoxPassword.Text = "";
+                }
+            } 
+            catch (Exception ex)
             {
-                MessageBox.Show("User gagal login");
-                textBoxUsername.Text = "";
-                textBoxPassword.Text = "";
+                MessageBox.Show("Koneksi Gagal"); 
+
             }
+            
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

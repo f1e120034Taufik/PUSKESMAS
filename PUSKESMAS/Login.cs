@@ -38,7 +38,7 @@ namespace PUSKESMAS
                     textBoxPassword.Text = "";
                 }
             } 
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Koneksi Gagal"); 
 
@@ -66,6 +66,14 @@ namespace PUSKESMAS
             {
                 buttonShowPassword.BringToFront();
                 textBoxPassword.PasswordChar = '*';
+            }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Yakin Ingin Keluar?", "Application Form", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
             }
         }
     }

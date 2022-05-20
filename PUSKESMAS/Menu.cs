@@ -41,7 +41,10 @@ namespace PUSKESMAS
         {
            if (MessageBox.Show("Yakin Ingin Keluar?", "Application Form" , MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                Application.Exit();
+                //Application.Exit();
+                FormLogin frmLogin = new FormLogin();
+                frmLogin.Show();
+                this.Hide();
             }
         }
 

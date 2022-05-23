@@ -34,6 +34,15 @@
             this.textBoxCariIDDokter = new System.Windows.Forms.TextBox();
             this.labelCariIDDokter = new System.Windows.Forms.Label();
             this.dataGridViewDokter = new System.Windows.Forms.DataGridView();
+            this.Id_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alamat_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hp_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tgl_lahir_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jenis_kelamin_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Spesialis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jam_kerja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDataDokter = new System.Windows.Forms.GroupBox();
             this.comboBoxJamKerja = new System.Windows.Forms.ComboBox();
             this.groupBoxJenisKelamin = new System.Windows.Forms.GroupBox();
@@ -57,15 +66,6 @@
             this.labelIDDokter = new System.Windows.Forms.Label();
             this.labelDataDokter = new System.Windows.Forms.Label();
             this.buttonCariIDDokter = new System.Windows.Forms.Button();
-            this.Id_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alamat_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hp_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tgl_lahir_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jenis_kelamin_dokter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Spesialis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Jam_kerja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDokter)).BeginInit();
             this.groupBoxDataDokter.SuspendLayout();
             this.groupBoxJenisKelamin.SuspendLayout();
@@ -149,6 +149,78 @@
             this.dataGridViewDokter.TabIndex = 11;
             this.dataGridViewDokter.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDokter_CellContentClick);
             // 
+            // Id_dokter
+            // 
+            this.Id_dokter.DataPropertyName = "Id_dokter";
+            this.Id_dokter.HeaderText = "ID Dokter";
+            this.Id_dokter.MinimumWidth = 6;
+            this.Id_dokter.Name = "Id_dokter";
+            this.Id_dokter.Width = 125;
+            // 
+            // Nama_dokter
+            // 
+            this.Nama_dokter.DataPropertyName = "Nama_dokter";
+            this.Nama_dokter.HeaderText = "Nama Dokter";
+            this.Nama_dokter.MinimumWidth = 6;
+            this.Nama_dokter.Name = "Nama_dokter";
+            this.Nama_dokter.Width = 125;
+            // 
+            // Alamat_dokter
+            // 
+            this.Alamat_dokter.DataPropertyName = "Alamat_dokter";
+            this.Alamat_dokter.HeaderText = "Alamat Dokter";
+            this.Alamat_dokter.MinimumWidth = 6;
+            this.Alamat_dokter.Name = "Alamat_dokter";
+            this.Alamat_dokter.Width = 125;
+            // 
+            // Hp_dokter
+            // 
+            this.Hp_dokter.DataPropertyName = "Hp_dokter";
+            this.Hp_dokter.HeaderText = "HP Dokter";
+            this.Hp_dokter.MinimumWidth = 6;
+            this.Hp_dokter.Name = "Hp_dokter";
+            this.Hp_dokter.Width = 125;
+            // 
+            // Email_dokter
+            // 
+            this.Email_dokter.DataPropertyName = "Email_dokter";
+            this.Email_dokter.HeaderText = "Email Dokter";
+            this.Email_dokter.MinimumWidth = 6;
+            this.Email_dokter.Name = "Email_dokter";
+            this.Email_dokter.Width = 125;
+            // 
+            // Tgl_lahir_dokter
+            // 
+            this.Tgl_lahir_dokter.DataPropertyName = "Tgl_lahir_dokter";
+            this.Tgl_lahir_dokter.HeaderText = "Tanggal Lahir Dokter";
+            this.Tgl_lahir_dokter.MinimumWidth = 6;
+            this.Tgl_lahir_dokter.Name = "Tgl_lahir_dokter";
+            this.Tgl_lahir_dokter.Width = 125;
+            // 
+            // Jenis_kelamin_dokter
+            // 
+            this.Jenis_kelamin_dokter.DataPropertyName = "Jenis_kelamin_dokter";
+            this.Jenis_kelamin_dokter.HeaderText = "Jenis Kelamin Dokter";
+            this.Jenis_kelamin_dokter.MinimumWidth = 6;
+            this.Jenis_kelamin_dokter.Name = "Jenis_kelamin_dokter";
+            this.Jenis_kelamin_dokter.Width = 125;
+            // 
+            // Spesialis
+            // 
+            this.Spesialis.DataPropertyName = "Spesialis";
+            this.Spesialis.HeaderText = "Spesialis";
+            this.Spesialis.MinimumWidth = 6;
+            this.Spesialis.Name = "Spesialis";
+            this.Spesialis.Width = 125;
+            // 
+            // Jam_kerja
+            // 
+            this.Jam_kerja.DataPropertyName = "Jam_kerja";
+            this.Jam_kerja.HeaderText = "Jam Kerja";
+            this.Jam_kerja.MinimumWidth = 6;
+            this.Jam_kerja.Name = "Jam_kerja";
+            this.Jam_kerja.Width = 125;
+            // 
             // groupBoxDataDokter
             // 
             this.groupBoxDataDokter.Controls.Add(this.comboBoxJamKerja);
@@ -181,6 +253,10 @@
             // comboBoxJamKerja
             // 
             this.comboBoxJamKerja.FormattingEnabled = true;
+            this.comboBoxJamKerja.Items.AddRange(new object[] {
+            "08:00 - 16:00",
+            "16:00 - 23:00",
+            "Belum Pasti"});
             this.comboBoxJamKerja.Location = new System.Drawing.Point(193, 494);
             this.comboBoxJamKerja.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxJamKerja.Name = "comboBoxJamKerja";
@@ -273,10 +349,11 @@
             // 
             // textBoxIDDokter
             // 
+            this.textBoxIDDokter.Enabled = false;
             this.textBoxIDDokter.Location = new System.Drawing.Point(193, 23);
             this.textBoxIDDokter.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDDokter.Name = "textBoxIDDokter";
-            this.textBoxIDDokter.Size = new System.Drawing.Size(376, 22);
+            this.textBoxIDDokter.Size = new System.Drawing.Size(49, 22);
             this.textBoxIDDokter.TabIndex = 2;
             // 
             // labelJamKerja
@@ -401,78 +478,6 @@
             this.buttonCariIDDokter.Text = "Cari";
             this.buttonCariIDDokter.UseVisualStyleBackColor = true;
             this.buttonCariIDDokter.Click += new System.EventHandler(this.buttonCariIDDokter_Click);
-            // 
-            // Id_dokter
-            // 
-            this.Id_dokter.DataPropertyName = "Id_dokter";
-            this.Id_dokter.HeaderText = "ID Dokter";
-            this.Id_dokter.MinimumWidth = 6;
-            this.Id_dokter.Name = "Id_dokter";
-            this.Id_dokter.Width = 125;
-            // 
-            // Nama_dokter
-            // 
-            this.Nama_dokter.DataPropertyName = "Nama_dokter";
-            this.Nama_dokter.HeaderText = "Nama Dokter";
-            this.Nama_dokter.MinimumWidth = 6;
-            this.Nama_dokter.Name = "Nama_dokter";
-            this.Nama_dokter.Width = 125;
-            // 
-            // Alamat_dokter
-            // 
-            this.Alamat_dokter.DataPropertyName = "Alamat_dokter";
-            this.Alamat_dokter.HeaderText = "Alamat Dokter";
-            this.Alamat_dokter.MinimumWidth = 6;
-            this.Alamat_dokter.Name = "Alamat_dokter";
-            this.Alamat_dokter.Width = 125;
-            // 
-            // Hp_dokter
-            // 
-            this.Hp_dokter.DataPropertyName = "Hp_dokter";
-            this.Hp_dokter.HeaderText = "HP Dokter";
-            this.Hp_dokter.MinimumWidth = 6;
-            this.Hp_dokter.Name = "Hp_dokter";
-            this.Hp_dokter.Width = 125;
-            // 
-            // Email_dokter
-            // 
-            this.Email_dokter.DataPropertyName = "Email_dokter";
-            this.Email_dokter.HeaderText = "Email Dokter";
-            this.Email_dokter.MinimumWidth = 6;
-            this.Email_dokter.Name = "Email_dokter";
-            this.Email_dokter.Width = 125;
-            // 
-            // Tgl_lahir_dokter
-            // 
-            this.Tgl_lahir_dokter.DataPropertyName = "Tgl_lahir_dokter";
-            this.Tgl_lahir_dokter.HeaderText = "Tanggal Lahir Dokter";
-            this.Tgl_lahir_dokter.MinimumWidth = 6;
-            this.Tgl_lahir_dokter.Name = "Tgl_lahir_dokter";
-            this.Tgl_lahir_dokter.Width = 125;
-            // 
-            // Jenis_kelamin_dokter
-            // 
-            this.Jenis_kelamin_dokter.DataPropertyName = "Jenis_kelamin_dokter";
-            this.Jenis_kelamin_dokter.HeaderText = "Jenis Kelamin Dokter";
-            this.Jenis_kelamin_dokter.MinimumWidth = 6;
-            this.Jenis_kelamin_dokter.Name = "Jenis_kelamin_dokter";
-            this.Jenis_kelamin_dokter.Width = 125;
-            // 
-            // Spesialis
-            // 
-            this.Spesialis.DataPropertyName = "Spesialis";
-            this.Spesialis.HeaderText = "Spesialis";
-            this.Spesialis.MinimumWidth = 6;
-            this.Spesialis.Name = "Spesialis";
-            this.Spesialis.Width = 125;
-            // 
-            // Jam_kerja
-            // 
-            this.Jam_kerja.DataPropertyName = "Jam_kerja";
-            this.Jam_kerja.HeaderText = "Jam Kerja";
-            this.Jam_kerja.MinimumWidth = 6;
-            this.Jam_kerja.Name = "Jam_kerja";
-            this.Jam_kerja.Width = 125;
             // 
             // FormDokter
             // 

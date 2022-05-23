@@ -115,8 +115,8 @@ namespace PUSKESMAS
             cmd = conn.CreateCommand();
             if (Nama_dokter != "")
             {
-                cmd.CommandText = "SELECT * FROM dokter WHERE dokter.Nama_dokter=@Nama_dokter";
-                cmd.Parameters.AddWithValue("@Nama_dokter", Nama_dokter);
+                cmd.CommandText = "SELECT * FROM dokter WHERE Nama_dokter LIKE @Nama_dokter";
+                cmd.Parameters.AddWithValue("@Nama_dokter", "%" + Nama_dokter + "%");
             }
             else cmd.CommandText = "SELECT * FROM dokter";
             try
@@ -154,8 +154,8 @@ namespace PUSKESMAS
         public string update()
         {
             string result = null;
-            using (MySqlCommand cmd = new MySqlCommand("UPDATE dokter SET Nama_pegawai=@Nama_pegawai," +
-                "Nama_dokter=@Nama_dokter,Alamat_dokter=@Alamat_dokter,Hp_dokter=@Hp_dokter,Email_dokter=@Email_dokter,Tgl_lahir_dokter=@Tgl_lahir_dokter,Jenis_kelamin_dokter=@Jenis_kelamin_dokter,Spesialis=@Spesialis,Jam_kerja=@Jam_kerja WHERE Id_dokter=@Id_dokter", conn))
+            using (MySqlCommand cmd = new MySqlCommand("UPDATE dokter SET Nama_dokter=@Nama_dokter," +
+                "Alamat_dokter=@Alamat_dokter,Hp_dokter=@Hp_dokter,Email_dokter=@Email_dokter,Tgl_lahir_dokter=@Tgl_lahir_dokter,Jenis_kelamin_dokter=@Jenis_kelamin_dokter,Spesialis=@Spesialis,Jam_kerja=@Jam_kerja WHERE Id_dokter=@Id_dokter", conn))
             {
                 cmd.Parameters.AddWithValue("@Id_dokter", this.Id_dokter);
                 cmd.Parameters.AddWithValue("@Nama_dokter", this.Nama_dokter);

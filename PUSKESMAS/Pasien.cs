@@ -31,5 +31,10 @@ namespace PUSKESMAS
         {
 
         }
+
+        private void FormPasien_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataRuangan.cs" />
+    <Compile Include="DataObat.cs" />
+    <Compile Include="DataPasien.cs" />
     <Compile Include="DataDokter.cs" />
     <Compile Include="Dokter.cs">
       <SubType>Form</SubType>

@@ -47,6 +47,11 @@
             this.labelNamaObat = new System.Windows.Forms.Label();
             this.labelIDObat = new System.Windows.Forms.Label();
             this.labelDataObat = new System.Windows.Forms.Label();
+            this.Id_obat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_obat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jenis_obat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kandungan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kuantitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObat)).BeginInit();
             this.groupBoxDataPasien.SuspendLayout();
             this.SuspendLayout();
@@ -54,13 +59,14 @@
             // buttonCariIDObat
             // 
             this.buttonCariIDObat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCariIDObat.Location = new System.Drawing.Point(1022, 89);
+            this.buttonCariIDObat.Location = new System.Drawing.Point(1032, 88);
             this.buttonCariIDObat.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCariIDObat.Name = "buttonCariIDObat";
             this.buttonCariIDObat.Size = new System.Drawing.Size(100, 28);
             this.buttonCariIDObat.TabIndex = 18;
             this.buttonCariIDObat.Text = "Cari";
             this.buttonCariIDObat.UseVisualStyleBackColor = true;
+            this.buttonCariIDObat.Click += new System.EventHandler(this.buttonCariIDObat_Click);
             // 
             // buttonHapusDataObat
             // 
@@ -72,6 +78,7 @@
             this.buttonHapusDataObat.TabIndex = 17;
             this.buttonHapusDataObat.Text = "Hapus";
             this.buttonHapusDataObat.UseVisualStyleBackColor = true;
+            this.buttonHapusDataObat.Click += new System.EventHandler(this.buttonHapusDataObat_Click);
             // 
             // buttonUbahDataObat
             // 
@@ -83,6 +90,7 @@
             this.buttonUbahDataObat.TabIndex = 16;
             this.buttonUbahDataObat.Text = "Ubah";
             this.buttonUbahDataObat.UseVisualStyleBackColor = true;
+            this.buttonUbahDataObat.Click += new System.EventHandler(this.buttonUbahDataObat_Click);
             // 
             // buttonSImpanDataObat
             // 
@@ -94,10 +102,11 @@
             this.buttonSImpanDataObat.TabIndex = 15;
             this.buttonSImpanDataObat.Text = "Simpan";
             this.buttonSImpanDataObat.UseVisualStyleBackColor = true;
+            this.buttonSImpanDataObat.Click += new System.EventHandler(this.buttonSImpanDataObat_Click);
             // 
             // textBoxCariIDObat
             // 
-            this.textBoxCariIDObat.Location = new System.Drawing.Point(789, 93);
+            this.textBoxCariIDObat.Location = new System.Drawing.Point(799, 92);
             this.textBoxCariIDObat.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCariIDObat.Name = "textBoxCariIDObat";
             this.textBoxCariIDObat.Size = new System.Drawing.Size(225, 22);
@@ -110,19 +119,26 @@
             this.labelCariIDObat.Location = new System.Drawing.Point(623, 93);
             this.labelCariIDObat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCariIDObat.Name = "labelCariIDObat";
-            this.labelCariIDObat.Size = new System.Drawing.Size(146, 19);
+            this.labelCariIDObat.Size = new System.Drawing.Size(168, 19);
             this.labelCariIDObat.TabIndex = 13;
-            this.labelCariIDObat.Text = "Cari Berdasarkan ID";
+            this.labelCariIDObat.Text = "Cari Berdasarkan Nama";
             // 
             // dataGridViewObat
             // 
             this.dataGridViewObat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewObat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_obat,
+            this.Nama_obat,
+            this.Jenis_obat,
+            this.Kandungan,
+            this.Kuantitas});
             this.dataGridViewObat.Location = new System.Drawing.Point(627, 147);
             this.dataGridViewObat.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewObat.Name = "dataGridViewObat";
             this.dataGridViewObat.RowHeadersWidth = 51;
             this.dataGridViewObat.Size = new System.Drawing.Size(601, 310);
             this.dataGridViewObat.TabIndex = 12;
+            this.dataGridViewObat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewObat_CellContentClick);
             // 
             // groupBoxDataPasien
             // 
@@ -162,15 +178,16 @@
             // 
             // textBoxKandunganObat
             // 
-            this.textBoxKandunganObat.Location = new System.Drawing.Point(193, 194);
+            this.textBoxKandunganObat.Location = new System.Drawing.Point(193, 170);
             this.textBoxKandunganObat.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxKandunganObat.Multiline = true;
             this.textBoxKandunganObat.Name = "textBoxKandunganObat";
-            this.textBoxKandunganObat.Size = new System.Drawing.Size(376, 22);
+            this.textBoxKandunganObat.Size = new System.Drawing.Size(376, 86);
             this.textBoxKandunganObat.TabIndex = 13;
             // 
             // textBoxKuantitas
             // 
-            this.textBoxKuantitas.Location = new System.Drawing.Point(193, 246);
+            this.textBoxKuantitas.Location = new System.Drawing.Point(193, 264);
             this.textBoxKuantitas.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxKuantitas.Name = "textBoxKuantitas";
             this.textBoxKuantitas.Size = new System.Drawing.Size(376, 22);
@@ -178,7 +195,8 @@
             // 
             // textBoxIDObat
             // 
-            this.textBoxIDObat.Location = new System.Drawing.Point(193, 23);
+            this.textBoxIDObat.Enabled = false;
+            this.textBoxIDObat.Location = new System.Drawing.Point(193, 30);
             this.textBoxIDObat.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDObat.Name = "textBoxIDObat";
             this.textBoxIDObat.Size = new System.Drawing.Size(376, 22);
@@ -199,7 +217,7 @@
             // 
             this.labelKuantitas.AutoSize = true;
             this.labelKuantitas.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKuantitas.Location = new System.Drawing.Point(27, 246);
+            this.labelKuantitas.Location = new System.Drawing.Point(27, 264);
             this.labelKuantitas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelKuantitas.Name = "labelKuantitas";
             this.labelKuantitas.Size = new System.Drawing.Size(73, 19);
@@ -250,6 +268,46 @@
             this.labelDataObat.TabIndex = 10;
             this.labelDataObat.Text = "DATA OBAT";
             // 
+            // Id_obat
+            // 
+            this.Id_obat.DataPropertyName = "Id_obat";
+            this.Id_obat.HeaderText = "ID Obat";
+            this.Id_obat.MinimumWidth = 6;
+            this.Id_obat.Name = "Id_obat";
+            this.Id_obat.Width = 125;
+            // 
+            // Nama_obat
+            // 
+            this.Nama_obat.DataPropertyName = "Nama_obat";
+            this.Nama_obat.HeaderText = "Nama Obat";
+            this.Nama_obat.MinimumWidth = 6;
+            this.Nama_obat.Name = "Nama_obat";
+            this.Nama_obat.Width = 125;
+            // 
+            // Jenis_obat
+            // 
+            this.Jenis_obat.DataPropertyName = "Jenis_obat";
+            this.Jenis_obat.HeaderText = "Jenis";
+            this.Jenis_obat.MinimumWidth = 6;
+            this.Jenis_obat.Name = "Jenis_obat";
+            this.Jenis_obat.Width = 125;
+            // 
+            // Kandungan
+            // 
+            this.Kandungan.DataPropertyName = "Kandungan";
+            this.Kandungan.HeaderText = "Kandungan";
+            this.Kandungan.MinimumWidth = 6;
+            this.Kandungan.Name = "Kandungan";
+            this.Kandungan.Width = 125;
+            // 
+            // Kuantitas
+            // 
+            this.Kuantitas.DataPropertyName = "Kuantitas";
+            this.Kuantitas.HeaderText = "Kuantitas";
+            this.Kuantitas.MinimumWidth = 6;
+            this.Kuantitas.Name = "Kuantitas";
+            this.Kuantitas.Width = 125;
+            // 
             // FormObat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -267,6 +325,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormObat";
             this.Text = "Obat";
+            this.Load += new System.EventHandler(this.FormObat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewObat)).EndInit();
             this.groupBoxDataPasien.ResumeLayout(false);
             this.groupBoxDataPasien.PerformLayout();
@@ -296,5 +355,10 @@
         private System.Windows.Forms.Label labelNamaObat;
         private System.Windows.Forms.Label labelIDObat;
         private System.Windows.Forms.Label labelDataObat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_obat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_obat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jenis_obat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kandungan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kuantitas;
     }
 }

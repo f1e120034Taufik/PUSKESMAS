@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.labelDataPasien = new System.Windows.Forms.Label();
             this.groupBoxDataPasien = new System.Windows.Forms.GroupBox();
+            this.groupBoxJenisKelamin = new System.Windows.Forms.GroupBox();
+            this.radioButtonPasienPerempuan = new System.Windows.Forms.RadioButton();
+            this.radioButtonPasienLakiLaki = new System.Windows.Forms.RadioButton();
+            this.comboBoxDokterPerawat = new System.Windows.Forms.ComboBox();
             this.dateTimePickerTanggalLahirPasien = new System.Windows.Forms.DateTimePicker();
+            this.labelJenisKelaminPasien = new System.Windows.Forms.Label();
             this.textBoxAlamatPasien = new System.Windows.Forms.TextBox();
             this.textBoxNamaPasien = new System.Windows.Forms.TextBox();
             this.textBoxHPPasien = new System.Windows.Forms.TextBox();
             this.textBoxRiwayatPenyakit = new System.Windows.Forms.TextBox();
-            this.textBoxObat = new System.Windows.Forms.TextBox();
             this.textBoxIDPasien = new System.Windows.Forms.TextBox();
             this.labelObat = new System.Windows.Forms.Label();
             this.labelDokter = new System.Windows.Forms.Label();
@@ -47,20 +50,25 @@
             this.labelNamaPasien = new System.Windows.Forms.Label();
             this.labelIDPasien = new System.Windows.Forms.Label();
             this.dataGridViewPasien = new System.Windows.Forms.DataGridView();
+            this.Id_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alamat_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hp_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tgl_lahir_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Jenis_kelamin_pasien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.R_penyakit_sebelumnya = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dr_perawat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Obat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelCariIDPasien = new System.Windows.Forms.Label();
             this.textBoxCariIDPasien = new System.Windows.Forms.TextBox();
             this.buttonSImpanDataPasien = new System.Windows.Forms.Button();
             this.buttonUbahDataPasien = new System.Windows.Forms.Button();
             this.buttonCariIDPasien = new System.Windows.Forms.Button();
             this.buttonHapusDataPasien = new System.Windows.Forms.Button();
-            this.comboBoxDokterPerawat = new System.Windows.Forms.ComboBox();
-            this.groupBoxJenisKelamin = new System.Windows.Forms.GroupBox();
-            this.radioButtonPasienPerempuan = new System.Windows.Forms.RadioButton();
-            this.radioButtonPasienLakiLaki = new System.Windows.Forms.RadioButton();
-            this.labelJenisKelaminPasien = new System.Windows.Forms.Label();
+            this.comboBoxObat = new System.Windows.Forms.ComboBox();
             this.groupBoxDataPasien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPasien)).BeginInit();
             this.groupBoxJenisKelamin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPasien)).BeginInit();
             this.SuspendLayout();
             // 
             // labelDataPasien
@@ -76,6 +84,7 @@
             // 
             // groupBoxDataPasien
             // 
+            this.groupBoxDataPasien.Controls.Add(this.comboBoxObat);
             this.groupBoxDataPasien.Controls.Add(this.groupBoxJenisKelamin);
             this.groupBoxDataPasien.Controls.Add(this.comboBoxDokterPerawat);
             this.groupBoxDataPasien.Controls.Add(this.dateTimePickerTanggalLahirPasien);
@@ -84,7 +93,6 @@
             this.groupBoxDataPasien.Controls.Add(this.textBoxNamaPasien);
             this.groupBoxDataPasien.Controls.Add(this.textBoxHPPasien);
             this.groupBoxDataPasien.Controls.Add(this.textBoxRiwayatPenyakit);
-            this.groupBoxDataPasien.Controls.Add(this.textBoxObat);
             this.groupBoxDataPasien.Controls.Add(this.textBoxIDPasien);
             this.groupBoxDataPasien.Controls.Add(this.labelObat);
             this.groupBoxDataPasien.Controls.Add(this.labelDokter);
@@ -102,6 +110,50 @@
             this.groupBoxDataPasien.TabIndex = 1;
             this.groupBoxDataPasien.TabStop = false;
             // 
+            // groupBoxJenisKelamin
+            // 
+            this.groupBoxJenisKelamin.Controls.Add(this.radioButtonPasienPerempuan);
+            this.groupBoxJenisKelamin.Controls.Add(this.radioButtonPasienLakiLaki);
+            this.groupBoxJenisKelamin.Location = new System.Drawing.Point(197, 168);
+            this.groupBoxJenisKelamin.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxJenisKelamin.Name = "groupBoxJenisKelamin";
+            this.groupBoxJenisKelamin.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxJenisKelamin.Size = new System.Drawing.Size(377, 57);
+            this.groupBoxJenisKelamin.TabIndex = 19;
+            this.groupBoxJenisKelamin.TabStop = false;
+            // 
+            // radioButtonPasienPerempuan
+            // 
+            this.radioButtonPasienPerempuan.AutoSize = true;
+            this.radioButtonPasienPerempuan.Location = new System.Drawing.Point(115, 23);
+            this.radioButtonPasienPerempuan.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonPasienPerempuan.Name = "radioButtonPasienPerempuan";
+            this.radioButtonPasienPerempuan.Size = new System.Drawing.Size(98, 20);
+            this.radioButtonPasienPerempuan.TabIndex = 1;
+            this.radioButtonPasienPerempuan.Text = "Perempuan";
+            this.radioButtonPasienPerempuan.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPasienLakiLaki
+            // 
+            this.radioButtonPasienLakiLaki.AutoSize = true;
+            this.radioButtonPasienLakiLaki.Location = new System.Drawing.Point(0, 23);
+            this.radioButtonPasienLakiLaki.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonPasienLakiLaki.Name = "radioButtonPasienLakiLaki";
+            this.radioButtonPasienLakiLaki.Size = new System.Drawing.Size(78, 20);
+            this.radioButtonPasienLakiLaki.TabIndex = 0;
+            this.radioButtonPasienLakiLaki.Text = "Laki-laki";
+            this.radioButtonPasienLakiLaki.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxDokterPerawat
+            // 
+            this.comboBoxDokterPerawat.DisplayMember = "Nama_dokter";
+            this.comboBoxDokterPerawat.FormattingEnabled = true;
+            this.comboBoxDokterPerawat.Location = new System.Drawing.Point(193, 419);
+            this.comboBoxDokterPerawat.Name = "comboBoxDokterPerawat";
+            this.comboBoxDokterPerawat.Size = new System.Drawing.Size(376, 24);
+            this.comboBoxDokterPerawat.TabIndex = 17;
+            this.comboBoxDokterPerawat.ValueMember = "Nama_dokter";
+            // 
             // dateTimePickerTanggalLahirPasien
             // 
             this.dateTimePickerTanggalLahirPasien.Location = new System.Drawing.Point(193, 293);
@@ -110,6 +162,17 @@
             this.dateTimePickerTanggalLahirPasien.Size = new System.Drawing.Size(376, 22);
             this.dateTimePickerTanggalLahirPasien.TabIndex = 16;
             this.dateTimePickerTanggalLahirPasien.Value = new System.DateTime(2022, 4, 19, 0, 0, 0, 0);
+            // 
+            // labelJenisKelaminPasien
+            // 
+            this.labelJenisKelaminPasien.AutoSize = true;
+            this.labelJenisKelaminPasien.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelJenisKelaminPasien.Location = new System.Drawing.Point(27, 192);
+            this.labelJenisKelaminPasien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelJenisKelaminPasien.Name = "labelJenisKelaminPasien";
+            this.labelJenisKelaminPasien.Size = new System.Drawing.Size(106, 19);
+            this.labelJenisKelaminPasien.TabIndex = 18;
+            this.labelJenisKelaminPasien.Text = "Jenis Kelamin";
             // 
             // textBoxAlamatPasien
             // 
@@ -144,20 +207,13 @@
             this.textBoxRiwayatPenyakit.Size = new System.Drawing.Size(376, 70);
             this.textBoxRiwayatPenyakit.TabIndex = 12;
             // 
-            // textBoxObat
-            // 
-            this.textBoxObat.Location = new System.Drawing.Point(193, 469);
-            this.textBoxObat.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxObat.Name = "textBoxObat";
-            this.textBoxObat.Size = new System.Drawing.Size(376, 22);
-            this.textBoxObat.TabIndex = 9;
-            // 
             // textBoxIDPasien
             // 
+            this.textBoxIDPasien.Enabled = false;
             this.textBoxIDPasien.Location = new System.Drawing.Point(193, 30);
             this.textBoxIDPasien.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDPasien.Name = "textBoxIDPasien";
-            this.textBoxIDPasien.Size = new System.Drawing.Size(376, 22);
+            this.textBoxIDPasien.Size = new System.Drawing.Size(82, 22);
             this.textBoxIDPasien.TabIndex = 2;
             // 
             // labelObat
@@ -254,12 +310,95 @@
             // dataGridViewPasien
             // 
             this.dataGridViewPasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPasien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_pasien,
+            this.Nama_pasien,
+            this.Alamat_pasien,
+            this.Hp_pasien,
+            this.Tgl_lahir_pasien,
+            this.Jenis_kelamin_pasien,
+            this.R_penyakit_sebelumnya,
+            this.Dr_perawat,
+            this.Obat});
             this.dataGridViewPasien.Location = new System.Drawing.Point(629, 146);
             this.dataGridViewPasien.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPasien.Name = "dataGridViewPasien";
             this.dataGridViewPasien.RowHeadersWidth = 51;
             this.dataGridViewPasien.Size = new System.Drawing.Size(601, 310);
             this.dataGridViewPasien.TabIndex = 2;
+            this.dataGridViewPasien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPasien_CellContentClick);
+            // 
+            // Id_pasien
+            // 
+            this.Id_pasien.DataPropertyName = "Id_pasien";
+            this.Id_pasien.HeaderText = "ID Pasien";
+            this.Id_pasien.MinimumWidth = 6;
+            this.Id_pasien.Name = "Id_pasien";
+            this.Id_pasien.Width = 125;
+            // 
+            // Nama_pasien
+            // 
+            this.Nama_pasien.DataPropertyName = "Nama_pasien";
+            this.Nama_pasien.HeaderText = "Nama Pasien";
+            this.Nama_pasien.MinimumWidth = 6;
+            this.Nama_pasien.Name = "Nama_pasien";
+            this.Nama_pasien.Width = 125;
+            // 
+            // Alamat_pasien
+            // 
+            this.Alamat_pasien.DataPropertyName = "Alamat_pasien";
+            this.Alamat_pasien.HeaderText = "Alamat Pasien";
+            this.Alamat_pasien.MinimumWidth = 6;
+            this.Alamat_pasien.Name = "Alamat_pasien";
+            this.Alamat_pasien.Width = 125;
+            // 
+            // Hp_pasien
+            // 
+            this.Hp_pasien.DataPropertyName = "Hp_pasien";
+            this.Hp_pasien.HeaderText = "HP Pasien";
+            this.Hp_pasien.MinimumWidth = 6;
+            this.Hp_pasien.Name = "Hp_pasien";
+            this.Hp_pasien.Width = 125;
+            // 
+            // Tgl_lahir_pasien
+            // 
+            this.Tgl_lahir_pasien.DataPropertyName = "Tgl_lahir_pasien";
+            this.Tgl_lahir_pasien.HeaderText = "Tanggal Lahir Pasien";
+            this.Tgl_lahir_pasien.MinimumWidth = 6;
+            this.Tgl_lahir_pasien.Name = "Tgl_lahir_pasien";
+            this.Tgl_lahir_pasien.Width = 125;
+            // 
+            // Jenis_kelamin_pasien
+            // 
+            this.Jenis_kelamin_pasien.DataPropertyName = "Jenis_kelamin_pasien";
+            this.Jenis_kelamin_pasien.HeaderText = "Jenis Kelamin Pasien";
+            this.Jenis_kelamin_pasien.MinimumWidth = 6;
+            this.Jenis_kelamin_pasien.Name = "Jenis_kelamin_pasien";
+            this.Jenis_kelamin_pasien.Width = 125;
+            // 
+            // R_penyakit_sebelumnya
+            // 
+            this.R_penyakit_sebelumnya.DataPropertyName = "R_penyakit_sebelumnya";
+            this.R_penyakit_sebelumnya.HeaderText = "Riwayat Penyakit Sebelumnya";
+            this.R_penyakit_sebelumnya.MinimumWidth = 6;
+            this.R_penyakit_sebelumnya.Name = "R_penyakit_sebelumnya";
+            this.R_penyakit_sebelumnya.Width = 125;
+            // 
+            // Dr_perawat
+            // 
+            this.Dr_perawat.DataPropertyName = "Dr_perawat";
+            this.Dr_perawat.HeaderText = "Dokter/Perawat";
+            this.Dr_perawat.MinimumWidth = 6;
+            this.Dr_perawat.Name = "Dr_perawat";
+            this.Dr_perawat.Width = 125;
+            // 
+            // Obat
+            // 
+            this.Obat.DataPropertyName = "Obat";
+            this.Obat.HeaderText = "Obat";
+            this.Obat.MinimumWidth = 6;
+            this.Obat.Name = "Obat";
+            this.Obat.Width = 125;
             // 
             // labelCariIDPasien
             // 
@@ -290,6 +429,7 @@
             this.buttonSImpanDataPasien.TabIndex = 5;
             this.buttonSImpanDataPasien.Text = "Simpan";
             this.buttonSImpanDataPasien.UseVisualStyleBackColor = true;
+            this.buttonSImpanDataPasien.Click += new System.EventHandler(this.buttonSImpanDataPasien_Click);
             // 
             // buttonUbahDataPasien
             // 
@@ -301,6 +441,7 @@
             this.buttonUbahDataPasien.TabIndex = 6;
             this.buttonUbahDataPasien.Text = "Ubah";
             this.buttonUbahDataPasien.UseVisualStyleBackColor = true;
+            this.buttonUbahDataPasien.Click += new System.EventHandler(this.buttonUbahDataPasien_Click);
             // 
             // buttonCariIDPasien
             // 
@@ -312,6 +453,7 @@
             this.buttonCariIDPasien.TabIndex = 9;
             this.buttonCariIDPasien.Text = "Cari";
             this.buttonCariIDPasien.UseVisualStyleBackColor = true;
+            this.buttonCariIDPasien.Click += new System.EventHandler(this.buttonCariIDPasien_Click);
             // 
             // buttonHapusDataPasien
             // 
@@ -323,60 +465,15 @@
             this.buttonHapusDataPasien.TabIndex = 7;
             this.buttonHapusDataPasien.Text = "Hapus";
             this.buttonHapusDataPasien.UseVisualStyleBackColor = true;
+            this.buttonHapusDataPasien.Click += new System.EventHandler(this.buttonHapusDataPasien_Click);
             // 
-            // comboBoxDokterPerawat
+            // comboBoxObat
             // 
-            this.comboBoxDokterPerawat.FormattingEnabled = true;
-            this.comboBoxDokterPerawat.Location = new System.Drawing.Point(193, 419);
-            this.comboBoxDokterPerawat.Name = "comboBoxDokterPerawat";
-            this.comboBoxDokterPerawat.Size = new System.Drawing.Size(376, 24);
-            this.comboBoxDokterPerawat.TabIndex = 17;
-            this.comboBoxDokterPerawat.ValueMember = "Nama_dokter";
-            // 
-            // groupBoxJenisKelamin
-            // 
-            this.groupBoxJenisKelamin.Controls.Add(this.radioButtonPasienPerempuan);
-            this.groupBoxJenisKelamin.Controls.Add(this.radioButtonPasienLakiLaki);
-            this.groupBoxJenisKelamin.Location = new System.Drawing.Point(197, 168);
-            this.groupBoxJenisKelamin.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBoxJenisKelamin.Name = "groupBoxJenisKelamin";
-            this.groupBoxJenisKelamin.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxJenisKelamin.Size = new System.Drawing.Size(377, 57);
-            this.groupBoxJenisKelamin.TabIndex = 19;
-            this.groupBoxJenisKelamin.TabStop = false;
-            // 
-            // radioButtonPasienPerempuan
-            // 
-            this.radioButtonPasienPerempuan.AutoSize = true;
-            this.radioButtonPasienPerempuan.Location = new System.Drawing.Point(115, 23);
-            this.radioButtonPasienPerempuan.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButtonPasienPerempuan.Name = "radioButtonPasienPerempuan";
-            this.radioButtonPasienPerempuan.Size = new System.Drawing.Size(98, 20);
-            this.radioButtonPasienPerempuan.TabIndex = 1;
-            this.radioButtonPasienPerempuan.Text = "Perempuan";
-            this.radioButtonPasienPerempuan.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonPasienLakiLaki
-            // 
-            this.radioButtonPasienLakiLaki.AutoSize = true;
-            this.radioButtonPasienLakiLaki.Location = new System.Drawing.Point(0, 23);
-            this.radioButtonPasienLakiLaki.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButtonPasienLakiLaki.Name = "radioButtonPasienLakiLaki";
-            this.radioButtonPasienLakiLaki.Size = new System.Drawing.Size(78, 20);
-            this.radioButtonPasienLakiLaki.TabIndex = 0;
-            this.radioButtonPasienLakiLaki.Text = "Laki-laki";
-            this.radioButtonPasienLakiLaki.UseVisualStyleBackColor = true;
-            // 
-            // labelJenisKelaminPasien
-            // 
-            this.labelJenisKelaminPasien.AutoSize = true;
-            this.labelJenisKelaminPasien.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJenisKelaminPasien.Location = new System.Drawing.Point(27, 192);
-            this.labelJenisKelaminPasien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelJenisKelaminPasien.Name = "labelJenisKelaminPasien";
-            this.labelJenisKelaminPasien.Size = new System.Drawing.Size(106, 19);
-            this.labelJenisKelaminPasien.TabIndex = 18;
-            this.labelJenisKelaminPasien.Text = "Jenis Kelamin";
+            this.comboBoxObat.FormattingEnabled = true;
+            this.comboBoxObat.Location = new System.Drawing.Point(193, 464);
+            this.comboBoxObat.Name = "comboBoxObat";
+            this.comboBoxObat.Size = new System.Drawing.Size(376, 24);
+            this.comboBoxObat.TabIndex = 20;
             // 
             // FormPasien
             // 
@@ -399,9 +496,9 @@
             this.Load += new System.EventHandler(this.FormPasien_Load);
             this.groupBoxDataPasien.ResumeLayout(false);
             this.groupBoxDataPasien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPasien)).EndInit();
             this.groupBoxJenisKelamin.ResumeLayout(false);
             this.groupBoxJenisKelamin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPasien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,9 +521,7 @@
         private System.Windows.Forms.TextBox textBoxNamaPasien;
         private System.Windows.Forms.TextBox textBoxHPPasien;
         private System.Windows.Forms.TextBox textBoxRiwayatPenyakit;
-        private System.Windows.Forms.TextBox textBoxObat;
         private System.Windows.Forms.TextBox textBoxIDPasien;
-        private System.Windows.Forms.DataGridView dataGridViewPasien;
         private System.Windows.Forms.Label labelCariIDPasien;
         private System.Windows.Forms.TextBox textBoxCariIDPasien;
         private System.Windows.Forms.Button buttonSImpanDataPasien;
@@ -438,5 +533,16 @@
         private System.Windows.Forms.RadioButton radioButtonPasienPerempuan;
         private System.Windows.Forms.RadioButton radioButtonPasienLakiLaki;
         private System.Windows.Forms.Label labelJenisKelaminPasien;
+        private System.Windows.Forms.DataGridView dataGridViewPasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Alamat_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hp_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tgl_lahir_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Jenis_kelamin_pasien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn R_penyakit_sebelumnya;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dr_perawat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Obat;
+        private System.Windows.Forms.ComboBox comboBoxObat;
     }
 }

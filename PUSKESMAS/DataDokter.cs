@@ -46,6 +46,7 @@ namespace PUSKESMAS
                     rdr.Read();
                     dataDokter.Id_dokter = Convert.ToInt16(rdr["id_dokter"]);
                     dataDokter.Nama_dokter = rdr["Nama_dokter"].ToString();
+                    dataDokter.Alamat_dokter = rdr["Alamat_dokter"].ToString();
                     dataDokter.Hp_dokter = rdr["Hp_dokter"].ToString();
                     dataDokter.Email_dokter = rdr["Email_dokter"].ToString();
                     dataDokter.Tgl_lahir_dokter = rdr["Tgl_lahir_dokter"].ToString();
